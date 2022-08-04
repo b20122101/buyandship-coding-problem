@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 /** @var \Laravel\Lumen\Routing\Router $router */
 
 /*
@@ -16,3 +17,5 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/shipment/fee/{str_rule}/{weight}', ['uses' => 'ShippingController@calculate_shipment_fee']);
