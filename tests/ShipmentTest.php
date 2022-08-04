@@ -28,6 +28,5 @@ class ShipmentTest extends TestCase
 
         $response = $shipping->calculate_shipment_fee('rule3', 4);
         $this->assertEquals($response, 26);
-
     }
 }
